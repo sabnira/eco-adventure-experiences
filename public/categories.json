@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "category": "Mountain Treks"
+  },
+  {
+    "id": 2,
+    "category": "Forest Expeditions"
+  },
+  {
+    "id": 3,
+    "category": "Wildlife Safaris"
+  },
+  {
+    "id": 4,
+    "category": "Mangrove Forest Expeditions"
+  }
+]
