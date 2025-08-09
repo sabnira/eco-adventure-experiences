@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Banner from '../components/Banner';
+import Category from '../components/Category.JSX';
+import { Outlet } from 'react-router-dom';
 
 const HomeLayout = () => {
     return (
@@ -12,6 +14,8 @@ const HomeLayout = () => {
 
             <main>
                 <Banner></Banner>
+                <Category></Category>
+                <Outlet></Outlet>
             </main>
 
             <footer>
