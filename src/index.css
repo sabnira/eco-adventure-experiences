@@ -1,2 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+@theme {
+  --font-lato: Lato, "sans-serif"; 
+}
+
+a.active{
+  /* background-color: #E7E7E7; */
+  color: #1CA8CB;
+  text-decoration: underline;
+}
+
+/* a:hover{
+    color: #1CA8CB;
+} */
+
