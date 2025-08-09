@@ -1,8 +1,9 @@
 [
   {
     "id": 1,
+    "categoryId": 1,
     "title": "Everest Base Camp Trek",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/DDxW0N39/geetangey-NBnkp-u-Epw-unsplash.jpg",
     "category": "Mountain Treks",
     "shortDescription": "Trek to the base of Mount Everest with breathtaking views and Sherpa culture.",
     "adventureCost": 1800,
@@ -10,15 +11,28 @@
     "location": "Nepal",
     "duration": "14 days",
     "adventureLevel": "Hard",
-    "includedItems": ["Guide", "Meals", "Tents", "Permits"],
-    "ecoFriendlyFeatures": ["Leave No Trace", "Solar Charging", "Waste Management"],
+    "includedItems": [
+      "Guide",
+      "Meals",
+      "Tents",
+      "Permits"
+    ],
+    "ecoFriendlyFeatures": [
+      "Leave No Trace",
+      "Solar Charging",
+      "Waste Management"
+    ],
     "maxGroupSize": 10,
-    "specialInstructions": ["Bring cold-weather gear", "Acclimatize properly"]
+    "specialInstructions": [
+      "Bring cold-weather gear",
+      "Acclimatize properly"
+    ]
   },
   {
     "id": 2,
+    "categoryId": 1,
     "title": "Inca Trail to Machu Picchu",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/XfbZg7ZD/photo-1752067954986-31cae7d48000.jpg",
     "category": "Mountain Treks",
     "shortDescription": "Hike through Andean highlands to the ancient city of the Incas.",
     "adventureCost": 1400,
@@ -26,15 +40,27 @@
     "location": "Peru",
     "duration": "5 days",
     "adventureLevel": "Moderate",
-    "includedItems": ["Permit", "Porters", "Meals", "Tent"],
-    "ecoFriendlyFeatures": ["Local Guides", "Eco-Camping"],
+    "includedItems": [
+      "Permit",
+      "Porters",
+      "Meals",
+      "Tent"
+    ],
+    "ecoFriendlyFeatures": [
+      "Local Guides",
+      "Eco-Camping"
+    ],
     "maxGroupSize": 12,
-    "specialInstructions": ["Permit required", "Good boots needed"]
+    "specialInstructions": [
+      "Permit required",
+      "Good boots needed"
+    ]
   },
   {
     "id": 3,
+    "categoryId": 1,
     "title": "Rocky Mountains Glacier Hike",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/9H8HS7jy/couple-traveling-together-country-side.jpg",
     "category": "Mountain Treks",
     "shortDescription": "Traverse icy trails through the stunning Canadian Rockies.",
     "adventureCost": 1200,
@@ -42,15 +68,27 @@
     "location": "Canada",
     "duration": "4 days",
     "adventureLevel": "Hard",
-    "includedItems": ["Guide", "Crampons", "Meals", "First Aid"],
-    "ecoFriendlyFeatures": ["Glacier Education", "Zero Waste"],
+    "includedItems": [
+      "Guide",
+      "Crampons",
+      "Meals",
+      "First Aid"
+    ],
+    "ecoFriendlyFeatures": [
+      "Glacier Education",
+      "Zero Waste"
+    ],
     "maxGroupSize": 6,
-    "specialInstructions": ["Wear thermal gear", "Training recommended"]
+    "specialInstructions": [
+      "Wear thermal gear",
+      "Training recommended"
+    ]
   },
   {
     "id": 4,
+    "categoryId": 1,
     "title": "Mount Kilimanjaro Trek",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/Tx88sPXG/full-shot-adventurous-woman-bivouacking.jpg",
     "category": "Mountain Treks",
     "shortDescription": "Summit Africa’s tallest peak with expert eco-guides.",
     "adventureCost": 2000,
@@ -58,15 +96,27 @@
     "location": "Tanzania",
     "duration": "8 days",
     "adventureLevel": "Hard",
-    "includedItems": ["Guide", "Porters", "Accommodation", "Permits"],
-    "ecoFriendlyFeatures": ["Reforestation Fund", "Eco Tents"],
+    "includedItems": [
+      "Guide",
+      "Porters",
+      "Accommodation",
+      "Permits"
+    ],
+    "ecoFriendlyFeatures": [
+      "Reforestation Fund",
+      "Eco Tents"
+    ],
     "maxGroupSize": 8,
-    "specialInstructions": ["Altitude meds advised", "Proper layering essential"]
+    "specialInstructions": [
+      "Altitude meds advised",
+      "Proper layering essential"
+    ]
   },
   {
     "id": 5,
+    "categoryId": 2,
     "title": "Amazon Rainforest Expedition",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/v4GRTGZJ/beautiful-tree-canopy-perspective-with-nature-landscape.jpg",
     "category": "Forest Expeditions",
     "shortDescription": "Venture into the heart of the Amazon with local eco-guides.",
     "adventureCost": 1300,
@@ -74,15 +124,27 @@
     "location": "Brazil",
     "duration": "6 days",
     "adventureLevel": "Hard",
-    "includedItems": ["Guide", "Rain Gear", "Meals", "First Aid"],
-    "ecoFriendlyFeatures": ["No Plastic Policy", "Local Employment"],
+    "includedItems": [
+      "Guide",
+      "Rain Gear",
+      "Meals",
+      "First Aid"
+    ],
+    "ecoFriendlyFeatures": [
+      "No Plastic Policy",
+      "Local Employment"
+    ],
     "maxGroupSize": 8,
-    "specialInstructions": ["Insect repellent required", "Prepare for humidity"]
+    "specialInstructions": [
+      "Insect repellent required",
+      "Prepare for humidity"
+    ]
   },
   {
     "id": 6,
+    "categoryId": 2,
     "title": "Congo Gorilla Forest Experience",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/HpgsCzwn/vertical-shot-giant-gorilla-standing-all-fours-forest.jpg",
     "category": "Forest Expeditions",
     "shortDescription": "Track gorillas in Congo’s biodiverse rainforest.",
     "adventureCost": 2200,
@@ -90,15 +152,27 @@
     "location": "Congo",
     "duration": "4 days",
     "adventureLevel": "Moderate",
-    "includedItems": ["Permit", "Guide", "Meals", "Lodging"],
-    "ecoFriendlyFeatures": ["Gorilla Conservation", "Controlled Tourism"],
+    "includedItems": [
+      "Permit",
+      "Guide",
+      "Meals",
+      "Lodging"
+    ],
+    "ecoFriendlyFeatures": [
+      "Gorilla Conservation",
+      "Controlled Tourism"
+    ],
     "maxGroupSize": 4,
-    "specialInstructions": ["No flash photography", "Keep distance from animals"]
+    "specialInstructions": [
+      "No flash photography",
+      "Keep distance from animals"
+    ]
   },
   {
     "id": 7,
+    "categoryId": 2,
     "title": "Costa Rica Cloud Forest Trek",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/yBfVyRtc/man-with-hiking-equipment-walking-mouton-forest.jpg",
     "category": "Forest Expeditions",
     "shortDescription": "Walk among misty treetops in a tropical cloud forest.",
     "adventureCost": 1150,
@@ -106,15 +180,27 @@
     "location": "Costa Rica",
     "duration": "4 days",
     "adventureLevel": "Moderate",
-    "includedItems": ["Guide", "Rain Gear", "Meals", "Lodging"],
-    "ecoFriendlyFeatures": ["Local Wildlife Protection", "Plastic-Free Tour"],
+    "includedItems": [
+      "Guide",
+      "Rain Gear",
+      "Meals",
+      "Lodging"
+    ],
+    "ecoFriendlyFeatures": [
+      "Local Wildlife Protection",
+      "Plastic-Free Tour"
+    ],
     "maxGroupSize": 10,
-    "specialInstructions": ["Dress in layers", "Quiet movement encouraged"]
+    "specialInstructions": [
+      "Dress in layers",
+      "Quiet movement encouraged"
+    ]
   },
   {
     "id": 8,
+    "categoryId": 3,
     "title": "Serengeti Wildlife Safari",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/R4PX0gpJ/eliott-chatauret-rmh-By-PXttms-unsplash.jpg",
     "category": "Wildlife Safaris",
     "shortDescription": "Experience the iconic African wildlife in its natural habitat.",
     "adventureCost": 2500,
@@ -122,15 +208,27 @@
     "location": "Tanzania",
     "duration": "7 days",
     "adventureLevel": "Easy",
-    "includedItems": ["Game Drives", "Meals", "Lodging", "Park Fees"],
-    "ecoFriendlyFeatures": ["Low-Emission Jeeps", "Wildlife Conservation"],
+    "includedItems": [
+      "Game Drives",
+      "Meals",
+      "Lodging",
+      "Park Fees"
+    ],
+    "ecoFriendlyFeatures": [
+      "Low-Emission Jeeps",
+      "Wildlife Conservation"
+    ],
     "maxGroupSize": 8,
-    "specialInstructions": ["Pack binoculars", "Vaccinations required"]
+    "specialInstructions": [
+      "Pack binoculars",
+      "Vaccinations required"
+    ]
   },
   {
     "id": 9,
+    "categoryId": 3,
     "title": "Kaziranga Rhino Safari",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/NdzWLdcS/indian-rhinoceros-beautiful-nature-looking-habitat-one-horned-rhino-endangered-species-biggest-kind.jpg",
     "category": "Wildlife Safaris",
     "shortDescription": "Spot rare one-horned rhinos in this UNESCO-protected park.",
     "adventureCost": 950,
@@ -138,15 +236,27 @@
     "location": "India",
     "duration": "3 days",
     "adventureLevel": "Easy",
-    "includedItems": ["Jeep Safari", "Meals", "Guide", "Lodging"],
-    "ecoFriendlyFeatures": ["Community Tourism", "Eco-Lodges"],
+    "includedItems": [
+      "Jeep Safari",
+      "Meals",
+      "Guide",
+      "Lodging"
+    ],
+    "ecoFriendlyFeatures": [
+      "Community Tourism",
+      "Eco-Lodges"
+    ],
     "maxGroupSize": 6,
-    "specialInstructions": ["Wear neutral colors", "Respect animal distance"]
+    "specialInstructions": [
+      "Wear neutral colors",
+      "Respect animal distance"
+    ]
   },
   {
     "id": 10,
+    "categoryId": 4,
     "title": "Sundarbans Mangrove Expedition",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/6q2TYsM/harrison-hargrave-jqw-Kb-UMb-k-unsplash.jpg",
     "category": "Mangrove Forest Expeditions",
     "shortDescription": "Explore the unique ecosystem of the world’s largest mangrove forest.",
     "adventureCost": 800,
@@ -154,15 +264,27 @@
     "location": "Bangladesh",
     "duration": "3 days",
     "adventureLevel": "Moderate",
-    "includedItems": ["Boat Tour", "Meals", "Lodging", "Guide"],
-    "ecoFriendlyFeatures": ["Solar Boats", "Mangrove Conservation"],
+    "includedItems": [
+      "Boat Tour",
+      "Meals",
+      "Lodging",
+      "Guide"
+    ],
+    "ecoFriendlyFeatures": [
+      "Solar Boats",
+      "Mangrove Conservation"
+    ],
     "maxGroupSize": 10,
-    "specialInstructions": ["Wear life jacket", "Avoid plastic"]
+    "specialInstructions": [
+      "Wear life jacket",
+      "Avoid plastic"
+    ]
   },
   {
     "id": 11,
+    "categoryId": 4,
     "title": "Mekong Delta Kayak Tour",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/238QJrtH/jason-tran-46-Hf-Ty1f-CEI-unsplash.jpg",
     "category": "Mangrove Forest Expeditions",
     "shortDescription": "Paddle through quiet mangrove canals in Vietnam’s Mekong Delta.",
     "adventureCost": 600,
@@ -170,15 +292,27 @@
     "location": "Vietnam",
     "duration": "2 days",
     "adventureLevel": "Easy",
-    "includedItems": ["Kayak", "Guide", "Lunch", "Safety Gear"],
-    "ecoFriendlyFeatures": ["Non-motor Transport", "Zero Waste"],
+    "includedItems": [
+      "Kayak",
+      "Guide",
+      "Lunch",
+      "Safety Gear"
+    ],
+    "ecoFriendlyFeatures": [
+      "Non-motor Transport",
+      "Zero Waste"
+    ],
     "maxGroupSize": 6,
-    "specialInstructions": ["Use sunscreen", "Wear quick-dry clothing"]
+    "specialInstructions": [
+      "Use sunscreen",
+      "Wear quick-dry clothing"
+    ]
   },
   {
     "id": 12,
+    "categoryId": 4,
     "title": "Bhola Island Eco Tour",
-    "image": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://i.ibb.co.com/GvtKnqxC/robin-canfield-9-LPe-RDet-UYk-unsplash.jpg",
     "category": "Mangrove Forest Expeditions",
     "shortDescription": "Boat trip through pristine mangroves with local community hosts.",
     "adventureCost": 500,
@@ -186,9 +320,76 @@
     "location": "Bangladesh",
     "duration": "1 day",
     "adventureLevel": "Easy",
-    "includedItems": ["Boat Ride", "Lunch", "Life Jacket", "Guide"],
-    "ecoFriendlyFeatures": ["Plastic-Free Trip", "Locally Sourced Food"],
+    "includedItems": [
+      "Boat Ride",
+      "Lunch",
+      "Life Jacket",
+      "Guide"
+    ],
+    "ecoFriendlyFeatures": [
+      "Plastic-Free Trip",
+      "Locally Sourced Food"
+    ],
     "maxGroupSize": 10,
-    "specialInstructions": ["Respect local customs", "No loud noise"]
+    "specialInstructions": [
+      "Respect local customs",
+      "No loud noise"
+    ]
+  },
+  {
+    "id": 13,
+    "categoryId": 1,
+    "title": "Annapurna Circuit Trek",
+    "image": "https://i.ibb.co.com/Y45m3MsF/anja-lee-ming-becker-1-Jxh-Pds-ZZQ8-unsplash.jpg",
+    "category": "Mountain Treks",
+    "shortDescription": "A scenic trek around the Annapurna massif with diverse landscapes.",
+    "adventureCost": 1600,
+    "bookingAvailability": true,
+    "location": "Nepal",
+    "duration": "12 days",
+    "adventureLevel": "Moderate",
+    "includedItems": [
+      "Guide",
+      "Meals",
+      "Permits",
+      "Lodging"
+    ],
+    "ecoFriendlyFeatures": [
+      "Local Homestays",
+      "No Plastic Policy"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Train for long hikes",
+      "Prepare for altitude changes"
+    ]
+  },
+  {
+    "id": 14,
+    "categoryId": 1,
+    "title": "Alps Mont Blanc Expedition",
+    "image": "https://i.ibb.co.com/RpgfxHpV/vertical-shot-khumbu-ama-dablam-with-vlue-sky.jpg",
+    "category": "Mountain Treks",
+    "shortDescription": "Climb Europe’s highest peak with expert alpine guides.",
+    "adventureCost": 2100,
+    "bookingAvailability": true,
+    "location": "France/Italy",
+    "duration": "7 days",
+    "adventureLevel": "Hard",
+    "includedItems": [
+      "Guide",
+      "Climbing Gear",
+      "Meals",
+      "Lodging"
+    ],
+    "ecoFriendlyFeatures": [
+      "Leave No Trace",
+      "Eco-Friendly Lodges"
+    ],
+    "maxGroupSize": 6,
+    "specialInstructions": [
+      "Climbing experience required",
+      "Weather-dependent itinerary"
+    ]
   }
 ]

@@ -14,8 +14,12 @@ const HomeLayout = () => {
 
             <main>
                 <Banner></Banner>
-                <Category></Category>
-                <Outlet></Outlet>
+
+                <div className='w-11/12 mx-auto'>
+                    <Category></Category>
+                    <Outlet></Outlet>
+                </div>
+                
             </main>
 
             <footer>

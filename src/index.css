@@ -8,12 +8,16 @@
   --font-lato: Lato, "sans-serif"; 
 }
 
-a.active{
-  /* background-color: #E7E7E7; */
+.navbar a.active{
   color: #1CA8CB;
   text-decoration: underline;
 }
 
+.category a.active{
+  background-color: #2A445E;
+  color: white;
+  
+}
 /* a:hover{
     color: #1CA8CB;
 } */
