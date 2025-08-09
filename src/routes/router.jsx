@@ -5,12 +5,12 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        children: [
-            {
-                path: "/",
+        // children: [
+        //     {
+        //         path: "/",
                 
-            }
-        ]
+        //     }
+        // ]
     },
     {
         path: "*",
