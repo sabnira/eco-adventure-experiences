@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import CategoryAdventure from "../components/CategoryAdventure";
+import AdventureDetails from "../pages/AdventureDetails";
 
 const router = createBrowserRouter([
     {
@@ -14,13 +15,14 @@ const router = createBrowserRouter([
             {
                 path: "/category/:id",
                 element: <CategoryAdventure></CategoryAdventure>,
-                loader: async ({ params }) => {
-                    const res = await fetch(`/adventure.json`);
-                    const data = await res.json();
-                    return data.filter(item => item.categoryId.toString() === params.id)
-                }
+                loader: () => fetch('../adventure.json'),
             },
         ]
+    },
+    {
+        path: "/adventure/:id",
+        element: <AdventureDetails></AdventureDetails>,
+        loader: () => fetch('../adventure.json'),
     },
     {
         path: "*",

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Card = ({ adventure }) => {
-  const { title, image, ecoFriendlyFeatures, link } = adventure;
+  const {id, title, image, ecoFriendlyFeatures } = adventure;
 
   return (
     <div className="relative w-full h-[500px] rounded-xl overflow-hidden group shadow-lg transition-all duration-500 ease-in-out hover:rounded-br-[70px]">
@@ -12,7 +12,7 @@ const Card = ({ adventure }) => {
         className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
       />
 
-      {/* Gradient shadow bottom → top */}
+      {/* Gradient shadow */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
       {/* Text + feature */}
@@ -25,10 +25,10 @@ const Card = ({ adventure }) => {
             }
         </ul>
 
-        {/* Browse Trips link - fade & slide in */}
+        {/* button*/}
         <Link
-          to={link}
-          className="mt-4 inline-block underline text-xl text-white font-semibold hover:text-gray-200 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+          to={`/adventure/${id}`}
+          className="mt-4 inline-block underline text-xl text-white font-semibold hover:text-gray-200 lg:opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
         >
           Explore Now
         </Link>
