@@ -49,13 +49,13 @@ const AdventureDetails = () => {
         <div>
             <Navbar></Navbar>
 
-            <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-2 py-10">
+            <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 py-10">
 
-                <div className="lg:col-span-2 w-full md:w-[90%] h-[600px] overflow-hidden">
+                <div className="lg:col-span-2 w-full h-[560px] overflow-hidden">
                     <img className="w-full h-full object-cover rounded-3xl" src={image} alt="" />
                 </div>
 
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-3">
 
                     <h2 className="font-gloock text-4xl text-[#2A445E] pb-5">{title}</h2>
                     <p className="text-justify text-gray-600 pb-8">{shortDescription}</p>

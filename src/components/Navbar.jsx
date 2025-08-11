@@ -38,8 +38,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end flex md:gap-4 md:pr-16">
                 <button className="text-4xl"><CgProfile></CgProfile></button>
-                <a className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Login</a>
-                <a className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Register</a>
+                <NavLink to="/auth/login" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Login</NavLink>
+                {/* <NavLink to="/auth/register" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Register</NavLink> */}
             </div>
         </div>
     );
