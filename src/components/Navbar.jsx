@@ -1,8 +1,12 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png"
 import { CgProfile } from "react-icons/cg";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthContext";
 
 const Navbar = () => {
+
+    const {user, logOut} = useContext(AuthContext);
 
     const links = <>
         <NavLink to="/">Home</NavLink>
@@ -37,9 +41,23 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end flex md:gap-4 md:pr-16">
-                <button className="text-4xl"><CgProfile></CgProfile></button>
-                <NavLink to="/auth/login" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Login</NavLink>
-                {/* <NavLink to="/auth/register" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Register</NavLink> */}
+
+                
+
+                {
+                    user && user?.email ?
+                    <>
+                    <h2>{user && user?.email}</h2>
+                    <button onClick={logOut} className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Logout</button>
+                    </>
+                    :
+                    <>
+                    <button className="text-4xl"><CgProfile></CgProfile></button>
+                    <NavLink to="/auth/login" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Login</NavLink>
+                    </>
+                    
+                }
+        
             </div>
         </div>
     );

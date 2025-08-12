@@ -1,7 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthContext";
 
 const Login = () => {
+
+    const {setUser, userLogin} = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+console.log(location);
+console.log(location.state);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -9,6 +19,16 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
+
+        userLogin(email, password)
+        .then((result) => {
+            const user = result.user;
+            setUser(user);
+            navigate(location?.state ? location.state : "/");
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 
     }
 
