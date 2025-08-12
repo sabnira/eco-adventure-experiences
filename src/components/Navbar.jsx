@@ -6,7 +6,7 @@ import { AuthContext } from "../provider/AuthContext";
 
 const Navbar = () => {
 
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const links = <>
         <NavLink to="/">Home</NavLink>
@@ -42,22 +42,27 @@ const Navbar = () => {
             </div>
             <div className="navbar-end flex md:gap-4 md:pr-16">
 
-                
+
 
                 {
                     user && user?.email ?
-                    <>
-                    <h2>{user && user?.email}</h2>
-                    <button onClick={logOut} className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Logout</button>
-                    </>
-                    :
-                    <>
-                    <button className="text-4xl"><CgProfile></CgProfile></button>
-                    <NavLink to="/auth/login" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Login</NavLink>
-                    </>
-                    
+                        <>
+                            <div className="tooltip tooltip-left" data-tip={user && user?.displayName}>
+                                <div className="w-10 h-10"><img className="w-full h-full object-cover rounded-3xl" src={user?.photoURL} alt="" /></div>
+                            </div>
+
+                            <NavLink to="/auth/profile" className="btn bg-[#2A445E] text-white hover:bg-[#D5E880] hover:text-black">Profile</NavLink>
+
+                            <button onClick={logOut} className="btn bg-[#2A445E] text-white hover:bg-[#D5E880] hover:text-black">Logout</button>
+                        </>
+                        :
+                        <>
+                            <button className="text-4xl"><CgProfile></CgProfile></button>
+                            <NavLink to="/auth/login" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Login</NavLink>
+                        </>
+
                 }
-        
+
             </div>
         </div>
     );

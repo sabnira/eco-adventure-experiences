@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import { AuthContext } from "./AuthContext";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile} from "firebase/auth";
 
 
 const AuthProvider = ({children}) => {
@@ -25,13 +25,22 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
 
+    const updateUserProfile = async (updatedData) => {
+        setLoading(true);
+        await updateProfile(auth.currentUser, updatedData);
+        // Immediately update the context state so Navbar updates without reload
+        setUser({ ...auth.currentUser });
+        setLoading(false);
+    }
+
     const authInfo = {
         user,
         setUser,
         createNewUser,
         userLogin,
         logOut,
-        loading
+        loading,
+        updateUserProfile
     }
 
     useEffect(() => {
