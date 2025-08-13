@@ -7,9 +7,10 @@ import { toast } from "react-toastify";
 
 const Login = () => {
 
-    const { setUser, userLogin } = useContext(AuthContext);
+    const { setUser, userLogin, googleLogin } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [email, setEmail] = useState("");
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -34,7 +35,19 @@ const Login = () => {
             .catch((err) => {
                 setErrorMessage(err.message);
             })
+    }
 
+    const handleGoogleSignIn = () => {
+        googleLogin()
+        .then((result) => {
+             toast.success("Login Successful!");
+            setUser(result.user)
+            navigate(location?.state ? location.state : "/auth/profile");
+        })
+        .catch(error => {
+            console.log('ERROR',error.message);
+           
+        })
     }
 
     return (
@@ -44,7 +57,9 @@ const Login = () => {
                 <div className="card-body space-y-2">
                     <form onSubmit={handleSubmit} className="form space-y-2">
 
-                        <input type="email" name="email" className="input w-full" placeholder="Email" required />
+                        <input type="email" name="email" className="input w-full" placeholder="Email" value={email}
+                        onChange={(e) => setEmail(e.target.value)} 
+                        required />
 
                         <div className="input w-full flex">
                             <input type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required />
@@ -58,7 +73,7 @@ const Login = () => {
                             </button>
                         </div>
 
-                        <div><Link to="/auth/forgetPassword" className="link link-hover">Forgot password?</Link></div>
+                        <div><Link to="/auth/forgetPassword" state={{ email }} className="link link-hover">Forgot password?</Link></div>
 
                         {
                             errorMessage && <p className="text-red-500">{
@@ -69,7 +84,7 @@ const Login = () => {
                     </form>
                     <div className="divider">OR</div>
 
-                    <div className="btn flex justify-center items-center gap-2 text-lg">
+                    <div onClick={handleGoogleSignIn} className="btn flex justify-center items-center gap-2 text-lg">
                         <FcGoogle className="text-2xl"></FcGoogle>
                         <h2 className="text-[#1b3248] font-semibold">Log in with Google</h2>
                     </div>

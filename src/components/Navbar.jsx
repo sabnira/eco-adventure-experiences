@@ -45,7 +45,7 @@ const Navbar = () => {
 
 
                 {
-                    user && user?.email ?
+                    user ?
                         <>
                             <div className="tooltip tooltip-left" data-tip={user && user?.displayName}>
                                 <div className="w-10 h-10"><img className="w-full h-full object-cover rounded-3xl" src={user?.photoURL} alt="" /></div>

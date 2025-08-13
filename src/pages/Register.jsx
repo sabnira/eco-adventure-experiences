@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 
 const Register = () => {
 
-    const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
+    const { createNewUser, setUser, updateUserProfile, googleLogin } = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
@@ -60,6 +60,19 @@ const Register = () => {
             })
     }
 
+    const handleGoogleSignIn = () => {
+        googleLogin()
+            .then((result) => {
+                toast.success("Login Successful!");
+                setUser(result.user)
+                navigate(location?.state ? location.state : "/auth/profile");
+            })
+            .catch(error => {
+                console.log('ERROR', error.message);
+
+            })
+    }
+
     return (
         <div className="flex justify-center items-center">
             <div className="card bg-base-100 w-full max-w-sm border">
@@ -67,14 +80,14 @@ const Register = () => {
                 <div className="card-body space-y-2">
                     <form onSubmit={handleSubmit} className="form space-y-2 ">
 
-                        <input type="text" name="name" className="input w-full" placeholder="User Name" required/>
+                        <input type="text" name="name" className="input w-full" placeholder="User Name" required />
 
-                        <input type="email" name="email" className="input w-full" placeholder="Email" required/>
+                        <input type="email" name="email" className="input w-full" placeholder="Email" required />
 
-                        <input type="url" name="photo" className="input w-full" placeholder="Photo-URL" required/>
+                        <input type="url" name="photo" className="input w-full" placeholder="Photo-URL" required />
 
                         <div className="input w-full flex">
-                            <input type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required/>
+                            <input type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required />
 
                             <button
                                 onClick={() => setShowPassword(!showPassword)}
@@ -101,7 +114,7 @@ const Register = () => {
 
                     <div className="divider">OR</div>
 
-                    <div className="btn flex justify-center items-center gap-2 text-lg">
+                    <div onClick={handleGoogleSignIn} className="btn flex justify-center items-center gap-2 text-lg">
                         <FcGoogle className="text-2xl"></FcGoogle>
                         <h2 className="text-[#1b3248] font-semibold">Log in with Google</h2>
                     </div>

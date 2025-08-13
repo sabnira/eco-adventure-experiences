@@ -1,15 +1,24 @@
-import { useContext, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthContext";
 import { toast } from "react-toastify";
 
 
 const ForgetPassword = () => {
 
-    const {forgetPassword} = useContext(AuthContext);
-     const [errorMessage, setErrorMessage] = useState('');
+    const { forgetPassword } = useContext(AuthContext);
+    const [errorMessage, setErrorMessage] = useState('');
+
     const navigate = useNavigate();
     const emailRef = useRef();
+    const location = useLocation();
+
+    // Prefill email from login page if available
+    useEffect(() => {
+        if (location.state?.email) {
+            emailRef.current.value = location.state.email;
+        }
+    }, [location.state]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,13 +29,13 @@ const ForgetPassword = () => {
         // console.log(email);
 
         forgetPassword(email)
-        .then(() => {
-            toast("Password Reset email sent, please check your email.")
-            navigate("/auth/login");
-        })
-        .catch((err) => {
+            .then(() => {
+                toast("Password Reset email sent, please check your email.")
+                navigate("/auth/login");
+            })
+            .catch((err) => {
                 setErrorMessage(err.message);
-        })
+            })
 
     }
 
@@ -55,7 +64,7 @@ const ForgetPassword = () => {
                     <p className="text-center">
                         <Link to="/auth/register" className="text-[#1b3248] font-bold underline">Create New Account</Link>
                     </p>
-                    
+
                 </div>
             </div>
         </div>
