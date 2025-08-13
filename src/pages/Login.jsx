@@ -1,17 +1,20 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthContext";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
 
-    const {setUser, userLogin} = useContext(AuthContext);
+    const { setUser, userLogin } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const location = useLocation();
     const navigate = useNavigate();
 
-console.log(location);
-console.log(location.state);
+    // console.log(location);
+    // console.log(location.state);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,14 +24,14 @@ console.log(location.state);
         const password = form.password.value;
 
         userLogin(email, password)
-        .then((result) => {
-            const user = result.user;
-            setUser(user);
-            navigate(location?.state ? location.state : "/");
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+            .then((result) => {
+                const user = result.user;
+                setUser(user);
+                navigate(location?.state ? location.state : "/");
+            })
+            .catch((err) => {
+                setErrorMessage(err.message);
+            })
 
     }
 
@@ -39,11 +42,26 @@ console.log(location.state);
                 <div className="card-body space-y-2">
                     <form onSubmit={handleSubmit} className="form space-y-2">
 
-                        <input type="email" name="email" className="input w-full" placeholder="Email" />
+                        <input type="email" name="email" className="input w-full" placeholder="Email" required/>
 
-                        <input type="password" name="password" className="input w-full" placeholder="Password" />
+                        <div className="input w-full flex">
+                            <input type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required/>
 
-                        <div><a className="link link-hover">Forgot password?</a></div>
+                            <button
+                                onClick={() => setShowPassword(!showPassword)}
+                                type="button" className="btn btn-xs ">
+                                {
+                                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                }
+                            </button>
+                        </div>
+
+                        <div><Link to="/auth/forgetPassword" className="link link-hover">Forgot password?</Link></div>
+                        
+                        {
+                            errorMessage && <p className="text-red-500">{
+                                errorMessage}</p>
+                        }
 
                         <button className="btn w-full bg-[#D5E880] mt-2 hover:bg-[#2A445E] hover:text-white">Log in</button>
                     </form>
@@ -55,7 +73,7 @@ console.log(location.state);
                     </div>
 
                     <p className="text-center">
-                        Don't Have An Account? <Link to="/auth/register" className="text-[#1b3248] font-bold">Sign up</Link>
+                        Don't Have An Account? <Link to="/auth/register" className="text-[#1b3248] font-bold underline">Sign up</Link>
                     </p>
                 </div>
             </div>

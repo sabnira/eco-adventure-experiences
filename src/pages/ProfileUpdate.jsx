@@ -50,16 +50,16 @@ const ProfileUpdate = () => {
                       </> : 
                       <>
                         <div className="w-28 h-28 mx-auto">
-                        <CiUser className="w-full h-full p-2 object-cover rounded-full border-2 border-[#2A445E]"></CiUser>
+                            <CiUser className="w-full h-full p-2 object-cover rounded-full border-2 border-[#2A445E]"></CiUser>
                         </div>
                       </>    
                     }
 
                     <form onSubmit={handleSubmit} className="form space-y-2 pt-4">
 
-                        <input type="text" name="name" className="input w-full" placeholder="User Name" />
+                        <input type="text" name="name" className="input w-full" placeholder="User Name" required/>
 
-                        <input onChange={(e) => setPhotoPreview(e.target.value)} type="text" name="photo" className="input w-full"  placeholder="Photo-URL" />
+                        <input onChange={(e) => setPhotoPreview(e.target.value)} type="url" name="photo" className="input w-full"  placeholder="Photo-URL" required/>
 
                         <button className="btn w-full bg-[#D5E880] mt-4 hover:bg-[#2A445E] hover:text-white">Update Profile</button>
                     </form>
