@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Login = () => {
 
@@ -25,9 +26,10 @@ const Login = () => {
 
         userLogin(email, password)
             .then((result) => {
+                toast.success("Login Successful!");
                 const user = result.user;
                 setUser(user);
-                navigate(location?.state ? location.state : "/");
+                navigate(location?.state ? location.state : "/auth/profile");
             })
             .catch((err) => {
                 setErrorMessage(err.message);
@@ -42,10 +44,10 @@ const Login = () => {
                 <div className="card-body space-y-2">
                     <form onSubmit={handleSubmit} className="form space-y-2">
 
-                        <input type="email" name="email" className="input w-full" placeholder="Email" required/>
+                        <input type="email" name="email" className="input w-full" placeholder="Email" required />
 
                         <div className="input w-full flex">
-                            <input type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required/>
+                            <input type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" required />
 
                             <button
                                 onClick={() => setShowPassword(!showPassword)}
@@ -57,7 +59,7 @@ const Login = () => {
                         </div>
 
                         <div><Link to="/auth/forgetPassword" className="link link-hover">Forgot password?</Link></div>
-                        
+
                         {
                             errorMessage && <p className="text-red-500">{
                                 errorMessage}</p>

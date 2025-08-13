@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthContext";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const Register = () => {
@@ -41,11 +42,11 @@ const Register = () => {
                 const user = result.user;
                 setUser(user);
                 console.log(user)
-
+                toast.success("Signup Successful!");
 
                 updateUserProfile({ displayName: name, photoURL: photo })
                     .then(() => {
-                        navigate("/");
+                        navigate("/auth/profile");
                     })
                     .catch(err => {
                         console.log(err);

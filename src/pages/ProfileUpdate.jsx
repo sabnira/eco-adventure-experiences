@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../provider/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { CiUser } from "react-icons/ci";
+import { toast } from "react-toastify";
 
 const ProfileUpdate = () => {
 
@@ -21,6 +22,7 @@ const ProfileUpdate = () => {
     
         updateUserProfile({displayName: name , photoURL: photo})
         .then(() => {
+            toast.success("Update Profile Successful!");
             navigate("/auth/profile");
         })
         .catch(err => {
