@@ -6,6 +6,7 @@ import Category from '../components/Category.JSX';
 import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import About from '../components/About';
+import Stats from '../components/Stats';
 
 const HomeLayout = () => {
     return (
@@ -24,6 +25,7 @@ const HomeLayout = () => {
                 </div>
 
                 <About></About>
+                <Stats></Stats>
                 
             </main>
 
