@@ -5,6 +5,7 @@ import Banner from '../components/Banner';
 import Category from '../components/Category.JSX';
 import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import About from '../components/About';
 
 const HomeLayout = () => {
     return (
@@ -21,6 +22,8 @@ const HomeLayout = () => {
                     <Category></Category>
                     <Outlet></Outlet>
                 </div>
+
+                <About></About>
                 
             </main>
 

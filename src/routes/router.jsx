@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element: <HomeLayout></HomeLayout>,
         children: [
             {
-                path: "",
+                path: "/",
                 element: <Navigate to={"category/1"}></Navigate>
             },
             {

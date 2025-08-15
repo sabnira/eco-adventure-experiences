@@ -10,9 +10,9 @@
   --font-gloock: Gloock, "serif"; 
 }
 
-.navbar a.active{
-  color: #1CA8CB;
-  text-decoration: underline;
+.navButton a.active{
+  background-color: #D5E880;
+  color: black;
 }
 
 .category a.active{

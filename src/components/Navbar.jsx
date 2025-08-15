@@ -3,15 +3,24 @@ import logo from "../assets/logo.png"
 import { CgProfile } from "react-icons/cg";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthContext";
+import { NavHashLink } from "react-router-hash-link";
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
     const links = <>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/adventures">Adventures</NavLink>
-        <NavLink to="/about">About</NavLink>
+        <NavLink className={({ isActive }) => `${isActive ? 'font-bold underline' : ''}`} to="/category/1">Home</NavLink>
+
+        <NavHashLink
+            smooth to="/category/1#adventure">
+            Adventures
+        </NavHashLink>
+
+        <NavHashLink
+            smooth to="/category/1#about">
+            About
+        </NavHashLink>
     </>
 
     return (
@@ -36,13 +45,11 @@ const Navbar = () => {
 
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 gap-6 text-lg mx-2 text-[#2A445E] font-thin">
+                <ul className="menu menu-horizontal px-1 gap-6 text-lg mx-2 text-[#2A445E] font-thin navClass">
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end flex md:gap-4 md:pr-16">
-
-
+            <div className="navbar-end flex md:gap-4 md:pr-16 navButton">
 
                 {
                     user ?
@@ -53,12 +60,12 @@ const Navbar = () => {
 
                             <NavLink to="/auth/profile" className="btn bg-[#2A445E] text-white hover:bg-[#D5E880] hover:text-black">Profile</NavLink>
 
-                            <button onClick={logOut} className="btn bg-[#2A445E] text-white hover:bg-[#D5E880] hover:text-black">Logout</button>
+                            <button onClick={logOut} className="btn bg-[#2A445E] text-white  hover:bg-[#D5E880] hover:text-black">Logout</button>
                         </>
                         :
                         <>
                             <button className="text-4xl"><CgProfile></CgProfile></button>
-                            <NavLink to="/auth/login" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Login</NavLink>
+                            <NavLink to="/auth/login" className="btn bg-[#2A445E] text-white font-thin hover:bg-[#D5E880] hover:text-black">Log in</NavLink>
                         </>
 
                 }
