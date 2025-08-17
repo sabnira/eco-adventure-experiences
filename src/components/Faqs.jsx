@@ -2,7 +2,7 @@ import faqImg from "../assets/girl.png"
 
 const Faqs = () => {
     return (
-        <div id="faqs" className="my-16 bg-[#E6F3F6] py-16">
+        <div id="faqs" className="mt-16 bg-[#E6F3F6] py-16">
 
             <div className="w-11/12 mx-auto grid grid-col-1 lg:grid-cols-2">
 
