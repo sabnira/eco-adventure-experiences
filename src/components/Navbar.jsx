@@ -21,6 +21,11 @@ const Navbar = () => {
             smooth to="/category/1#about">
             About
         </NavHashLink>
+
+         <NavHashLink
+            smooth to="/category/1#faqs">
+            FAQs
+        </NavHashLink>
     </>
 
     return (

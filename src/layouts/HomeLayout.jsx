@@ -7,6 +7,7 @@ import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import About from '../components/About';
 import Stats from '../components/Stats';
+import Faqs from '../components/Faqs';
 
 const HomeLayout = () => {
     return (
@@ -26,6 +27,7 @@ const HomeLayout = () => {
 
                 <About></About>
                 <Stats></Stats>
+                <Faqs></Faqs>
                 
             </main>
 
