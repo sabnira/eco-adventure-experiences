@@ -8,11 +8,13 @@ import { ToastContainer } from 'react-toastify';
 import About from '../components/About';
 import Stats from '../components/Stats';
 import Faqs from '../components/Faqs';
+import DynamicTitle from '../components/DynamicTitle';
 
 const HomeLayout = () => {
     return (
         <div className='font-lato'>
             <ToastContainer />
+            <DynamicTitle></DynamicTitle>
             <nav>
                 <Navbar></Navbar>
             </nav>

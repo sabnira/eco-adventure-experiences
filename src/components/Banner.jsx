@@ -5,6 +5,7 @@ import bg1 from "../assets/bg_1.jpg";
 import bg2 from "../assets/bg_2.jpg";
 import bg3 from "../assets/bg_3.jpg";
 import bg4 from "../assets/bg_4.jpg";
+import { NavHashLink } from "react-router-hash-link";
 
 
 const slides = [
@@ -32,6 +33,7 @@ const slides = [
 
 
 const Banner = () => {
+
     return (
         <Carousel
             showArrows={true}
@@ -51,9 +53,12 @@ const Banner = () => {
                         <div className="max-w-full">
                             <p className="mb-5 text-7xl font-bold">{slide.title}</p>
                             <p className="mb-5 text-2xl">{slide.text}</p>
-                            <button className="btn bg-[#D5E880] border-none shadow-none px-6 text-lg font-thin rounded-br-3xl hover:bg-white hover:rounded-br-sm transition-all duration-300 ease-in-out">
+                            <NavHashLink
+                                smooth to="/category/1#adventure" 
+                                className="btn bg-[#D5E880] border-none shadow-none px-6 text-lg font-thin rounded-br-3xl hover:bg-white hover:rounded-br-sm transition-all duration-300 ease-in-out"
+                                >
                                 Explore More
-                            </button>
+                            </NavHashLink>
                         </div>
                     </div>
                 </div>

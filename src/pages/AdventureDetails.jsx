@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
 import { RiErrorWarningLine } from "react-icons/ri";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
+import DynamicTitle from "../components/DynamicTitle";
 
 const AdventureDetails = () => {
 
@@ -47,6 +48,7 @@ const AdventureDetails = () => {
 
     return (
         <div>
+            <DynamicTitle></DynamicTitle>
             <Navbar></Navbar>
 
             <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8 py-10">
