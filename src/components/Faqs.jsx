@@ -12,8 +12,8 @@ const Faqs = () => {
 
                 <div className="space-y-2">
 
-                    <h4 className="text-[#0D3A48] font-bold text-lg font-gloock m-0">FAQs</h4>
-                    <p className="text-[#0D3A48] text-4xl pb-6">Answers to Your Hiking Questions</p>
+                    <h4  data-aos="slide-up" className="text-[#0D3A48] font-bold text-lg font-gloock m-0">FAQs</h4>
+                    <p data-aos="slide-up"  className="text-[#0D3A48] text-4xl pb-6">Answers to Your Hiking Questions</p>
 
                     <div className="collapse collapse-plus border p-2">
                         <input type="radio" name="my-accordion-3" defaultChecked />

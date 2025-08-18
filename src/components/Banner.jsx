@@ -6,6 +6,7 @@ import bg2 from "../assets/bg_2.jpg";
 import bg3 from "../assets/bg_3.jpg";
 import bg4 from "../assets/bg_4.jpg";
 import { NavHashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 
 
 const slides = [
@@ -51,10 +52,11 @@ const Banner = () => {
                     <div className="hero-overlay"></div>
                     <div className="hero-content text-white text-center w-full">
                         <div className="max-w-full">
-                            <p className="mb-5 text-7xl font-bold">{slide.title}</p>
-                            <p className="mb-5 text-2xl">{slide.text}</p>
+                            <p data-aos="slide-up" className="mb-5 text-7xl font-bold">{slide.title}</p>
+                            <p data-aos="slide-up" className="mb-5 text-2xl">{slide.text}</p>
                             <NavHashLink
-                                smooth to="/category/1#adventure" 
+                                data-aos="slide-up"
+                                to="/category/1#adventure" 
                                 className="btn bg-[#D5E880] border-none shadow-none px-6 text-lg font-thin rounded-br-3xl hover:bg-white hover:rounded-br-sm transition-all duration-300 ease-in-out"
                                 >
                                 Explore More

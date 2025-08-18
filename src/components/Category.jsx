@@ -15,13 +15,13 @@ const Category = () => {
     return (
         <div id="adventure" className="py-16">
             <div className="text-center">
-                <h2 className="text-4xl font-thin mb-2">Adventure Experiences</h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <h2 data-aos="fade-right" className="text-4xl font-thin mb-4">Adventure Experiences</h2>
+                <p data-aos="fade-right" className="text-lg text-gray-600 mb-6">
                     Discover thrilling eco-friendly adventures crafted to inspire your next journey
                 </p>
             </div>
 
-            <div className="text-center category">
+            <div data-aos="slide-up" className="text-center category">
                 {
                     categories.map((category) => (
                         <NavLink to={`/category/${category.id}`} key={category.id} className="btn my-2 mx-6 bg-[#D5E880] border-none shadow-none p-8 text-lg font-thin rounded-br-3xl hover:bg-[#2A445E] hover:text-white hover:rounded-br-sm transition-all duration-300 ease-in-out">{category.category}</NavLink>

@@ -5,6 +5,7 @@
 @plugin "daisyui";
 
 
+
 @theme {
   --font-lato: Lato, "sans-serif"; 
   --font-gloock: Gloock, "serif"; 
@@ -20,7 +21,5 @@
   color: white;
   
 }
-/* a:hover{
-    color: #1CA8CB;
-} */
+
 

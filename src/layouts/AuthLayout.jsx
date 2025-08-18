@@ -7,7 +7,7 @@ import DynamicTitle from '../components/DynamicTitle';
 
 const AuthLayout = () => {
     return (
-        <div>
+        <div className='font-lato'>
             <ToastContainer />
             <DynamicTitle></DynamicTitle>
             <Navbar></Navbar>

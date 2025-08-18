@@ -39,9 +39,9 @@ const About = () => {
                 </div>
 
                 <div className="text-center">
-                    <h2 className="text-5xl font-gloock">About Us</h2>
-                    <p className="text-xl py-4 font-thin md:px-16">Connecting you with natures wonders, one unforgettable journey at a time.</p>
-                    <div className="w-full h-[430px]">
+                    <h2 data-aos="slide-up" className="text-5xl font-gloock">About Us</h2>
+                    <p data-aos="slide-up" className="text-xl py-4 font-thin md:px-16">Connecting you with natures wonders, one unforgettable journey at a time.</p>
+                    <div data-aos="slide-up" className="w-full h-[430px]">
                         <img src={about} className="w-full h-full object-cover rounded-4xl" alt="" />
                     </div>
 

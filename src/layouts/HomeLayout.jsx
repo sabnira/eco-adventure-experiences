@@ -1,23 +1,37 @@
-import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Banner from '../components/Banner';
-import Category from '../components/Category.JSX';
 import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import About from '../components/About';
 import Stats from '../components/Stats';
 import Faqs from '../components/Faqs';
 import DynamicTitle from '../components/DynamicTitle';
+import Category from '../components/Category';
+
+
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HomeLayout = () => {
+
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,  // animation duration in ms
+            offset: 120,     // start animation when 120px of the element is visible
+            once: true,      // animation happens only once
+        }); 
+    }, []);
+
     return (
         <div className='font-lato'>
             <ToastContainer />
-            <DynamicTitle></DynamicTitle>
-            <nav>
-                <Navbar></Navbar>
-            </nav>
+            <DynamicTitle />
+
+
+            <Navbar></Navbar>
 
             <main>
                 <Banner></Banner>
@@ -30,12 +44,13 @@ const HomeLayout = () => {
                 <About></About>
                 <Stats></Stats>
                 <Faqs></Faqs>
-                
+
             </main>
 
             <footer>
                 <Footer></Footer>
             </footer>
+
         </div>
     );
 };
