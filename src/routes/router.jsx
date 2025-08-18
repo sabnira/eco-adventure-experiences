@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute";
 import Profile from "../pages/Profile";
 import ProfileUpdate from "../pages/ProfileUpdate";
 import ForgetPassword from "../pages/ForgetPassword";
+import Error from "../components/Error";
 
 const router = createBrowserRouter([
     {
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
     },
     {
         path: "*",
-        element: <h1>ERROR</h1>
+        element: <Error></Error>
     }
 ])
 
