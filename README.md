@@ -4,7 +4,7 @@
 An eco-adventure blog website showcasing eco-friendly travel adventures such as mountain treks, forest expeditions, safaris, and more. Users can explore adventures, view details, and manage their profiles with Firebase authentication.  
 
 ## 🚀 Live URL  
-🔗 [Live Site](https://your-live-site-link.com)  
+🔗 [Live Site][https://eco-adventure-ex.netlify.app/]  
 
 ## ✨ Key Features  
 - Dynamic adventure cards with details  
